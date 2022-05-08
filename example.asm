@@ -1,5 +1,5 @@
-; anus language example file creator
-; written by anusO1
+# anus language example file creator
+# written by anusO1
 
             .data
 file:       .asciiz "example.anus"

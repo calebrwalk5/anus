@@ -9,5 +9,3 @@ N: Print the source code
 U: 99 bottles of beer exercise 
 
 S: increment the accumulator
-
-example.asm makes a sample program

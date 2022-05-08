@@ -1,6 +1,6 @@
-; compiler for the ANUS programming language 
-; based on the HQ9+ joke language 
-; written by anusO1
+# compiler for the ANUS programming language 
+# based on the HQ9+ joke language 
+# written by anusO1
 
 .data
     a:  .byte 'A'
@@ -16,13 +16,13 @@
 	s4: .asciiz " bottles of beer on the wall.\n"
 	s5: .asciiz "1 bottle of beer on the wall, 1 bottle of beer.\n\nTake one down, pass it around, no more bottles of beer on the wall." # there's only one beer left
 
-    sc: .space 1000
+    # sc: .space 1000
 
 .text
     li, $s6, 0 # accumulator 
 
     li $v0, 8
-    li $a0, sc
+    li $a0, 1000
     li $a1, 1000
     syscall
 
@@ -67,7 +67,7 @@
         j Return
 
     N:
-        la $a0, sc
+        la $a0, 1000
         li $v0, 4
         syscall
         j Return
@@ -90,7 +90,7 @@
 			la $a0, s2
 			syscall
 			
-			subi $t2, $t2, 1
+			addi $t2, $t2, -1
 			
 			li $v0, 4
 			la $a0, s3
