@@ -1,4 +1,6 @@
 ; compiler for the ANUS programming language 
+; based on the HQ9+ joke language 
+; written by anusO1
 
 .data
     a:  .byte 'A'
@@ -6,13 +8,13 @@
     u:  .byte 'U'
     s:  .byte 'S'
 
-    AW: .asciiz "Hello World\n"
+    AW:		.asciiz "Hello World\n"
 
     s1: .asciiz " bottles of beer on the wall, "
 	s2: .asciiz " bottles of beer.\n"
 	s3: .asciiz "Take one down, pass it around, "
-	s4: .asciiz " bottles of beer on the wall.\n\n"
-	s5: .asciiz "1 bottle of beer on the wall, 1 bottle of beer.\n\nTake one down, pass it around, no more bottles of beer on the wall."
+	s4: .asciiz " bottles of beer on the wall.\n"
+	s5: .asciiz "1 bottle of beer on the wall, 1 bottle of beer.\n\nTake one down, pass it around, no more bottles of beer on the wall." # there's only one beer left
 
     sc: .space 1000
 
@@ -105,6 +107,6 @@
 		syscall
 			j Return
 
-        S: 
-            addi $s6, $s6, 1
-            j Return
+    S: 
+        addi $s6, $s6, 1
+        j Return
