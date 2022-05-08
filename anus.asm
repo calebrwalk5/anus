@@ -90,7 +90,7 @@
 			la $a0, s2
 			syscall
 			
-			addi $t2, $t2, -1
+			addi $t2, $t2, -1 # i added negative one instead of subtracting 1 lmaooo
 			
 			li $v0, 4
 			la $a0, s3
