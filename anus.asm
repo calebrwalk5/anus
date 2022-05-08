@@ -1,4 +1,4 @@
-; compiler for the anus programming language 
+; compiler for the ANUS programming language 
 
 .data
     a:  .byte 'A'
