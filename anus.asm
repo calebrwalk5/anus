@@ -65,4 +65,46 @@
         j Return
 
     N:
-        
+        la $a0, sc
+        li $v0, 4
+        syscall
+        j Return
+    
+    U:
+        li $t2, 99
+		For:
+			beq $t2, 0, ExitF
+			
+			li $v0, 1
+			move $a0, $t2
+			syscall
+			li $v0, 4
+			la $a0, s1
+			syscall
+			li $v0, 1
+			move $a0, $t2
+			syscall
+			li $v0, 4
+			la $a0, s2
+			syscall
+			
+			subi $t2, $t2, 1
+			
+			li $v0, 4
+			la $a0, s3
+			syscall
+			li $v0, 1
+			move $a0, $t2
+			syscall
+			li $v0, 4
+			la $a0, s4
+			syscall
+			j For
+		ExitF:
+		la $a0, s5
+		syscall
+			j Return
+
+        S: 
+            addi $s6, $s6, 1
+            j Return
