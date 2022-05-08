@@ -1,4 +1,4 @@
-ANUS programming language compiler 
+ANUS programming language compiler, inspired by HQ9+
 Written in MIPS assembly
 
 Functions:
